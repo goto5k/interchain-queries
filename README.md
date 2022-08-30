@@ -7,11 +7,11 @@ go build
 sudo mv interchain-queries /usr/local/bin/icq
 ```
 
-``
+```
 cd $HOME && mkdir .icq
-``
+```
 
-``
+```
 sudo tee $HOME/.icq/config.yaml > /dev/null <<EOF
 default_chain: stride-testnet
 chains:
@@ -47,15 +47,15 @@ chains:
     sign-mode: direct
 cl: {}
 EOF
-``
+```
 
-``
+```
 icq keys restore --chain stride-testnet wallet
 icq keys restore --chain gaia-testnet wallet
-``
+```
 
 
-``
+```
 sudo tee /etc/systemd/system/icqd.service > /dev/null <<EOF
 [Unit]
 Description=Interchain Query Service
@@ -71,15 +71,15 @@ LimitNOFILE=65535
 [Install]
 WantedBy=multi-user.target
 EOF
-``
+```
 
 
-``
+```
 sudo systemctl daemon-reload
 sudo systemctl enable icqd
 sudo systemctl restart icqd
-``
+```
 
-``
+```
 journalctl -u icqd -f -o cat
-``
+```
