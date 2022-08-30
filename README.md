@@ -1,11 +1,11 @@
 # interchain-queries
-``
+```
 cd $HOME
 git clone https://github.com/Stride-Labs/interchain-queries.git
 cd interchain-queries
 go build
 sudo mv interchain-queries /usr/local/bin/icq
-``
+```
 
 ``
 cd $HOME && mkdir .icq
